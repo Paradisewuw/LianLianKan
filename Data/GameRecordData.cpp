@@ -9,4 +9,5 @@ bool GameRecordData::saveRecord(int timeInSeconds) {
     query.prepare("INSERT INTO game_records (completion_time) VALUES (:time)");
     query.bindValue(":time", timeInSeconds);
     return query.exec();
+
 }
